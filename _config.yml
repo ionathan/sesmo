@@ -11,7 +11,7 @@ description:         '13th International Symposium on Environmental Software Sys
   Wageningen, The Netherlands 
   February 5-7, 2020'
 url:                 http://www.isess.net
-baseurl:             ''
+baseurl:             /sesmo
 paginate:            5
 
 # About/contact
