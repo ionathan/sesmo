@@ -1,0 +1,60 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked> -->
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+  <img src="/public/logo2020.png" width="237" height="95" alt="Logo2020">
+    <p>{{ site.description }}</p>
+  </div>
+  <nav class="sidebar-nav" markdown ="1">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+    {% comment %}
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+    {% assign pages_list = site.pages | sort:"date" %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "page" %}
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+      <!-- <a class="sidebar-nav-item" href="index.html#conference-topics">Conference topics</a>
+      <a class="sidebar-nav-item" href="index.html#important-dates">Important dates</a> -->
+
+<!--
+    
+    <a class="sidebar-nav-item" href="#submission-guidelines">Submissions</a>
+    
+    <a class="sidebar-nav-item" href="#programme-committee">Programme Committee</a>
+     -->
+  </nav>
+
+ 
+  
+  <div class="sidebar-item" class="message" >
+      <p><a href="https://easychair.org/conferences/?conf=isess2020">Submit a paper</a> by Oct 4, 2019!</p>
+      
+  </div>
+  
+  <div class="sidebar-item">
+    <p>Organized by the <a href="http://www.ifip.org">IFIP Working Group 5.11 Computers and the Environment</a>
+           and the <a href="https://www.wur.nl/en/Value-Creation-Cooperation/WDCC.htm">Wageningen Data Competence Center</a> 
+    </p>
+  </div>
+
+    
+    
+   <div class="sidebar-item">  
+       <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+
+
+</div>

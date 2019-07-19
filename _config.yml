@@ -1,1 +1,23 @@
-remote_theme: poole/lanyon
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+# relative_permalinks: true
+
+title:               'Data Science in Action'
+tagline:             'ISESS 2020'
+description:         '13th International Symposium on Environmental Software Systems,  
+  Wageningen, The Netherlands 
+  February 5-7, 2020'
+url:                 http://www.isess.net
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Ioannis Athanasiadis
+  url:               http://athanasiadis.info
+  email:             ioannis@athanasiadis.info
+
+include:
+  - _pages
